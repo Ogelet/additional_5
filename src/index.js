@@ -2,8 +2,7 @@ module.exports = function check(str, bracketsConfig) {
   let result = false;
   let configLength = bracketsConfig.length;
   for(let i = 0; i < configLength ; i++){
-    let arrayInString = bracketsConfig[i].join('');
-    bracketsConfig[i] = arrayInString;
+    bracketsConfig[i] =  ''+bracketsConfig[i][0] + bracketsConfig[i][1];
   };
   function lookAndDelete(substr){
     index = str.indexOf(substr);
